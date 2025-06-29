@@ -4,6 +4,12 @@ module "resource_group" {
   location = "Australia east"
 }
 
+module "resource_group1" {
+  source   = "../Automation_todo/resource group"
+  name     = "rg-virat1"
+  location = "Australia east"
+}
+
 module "virtual_network" {
   depends_on          = [module.resource_group]
   source              = "../Automation_todo/Virtual_network"
